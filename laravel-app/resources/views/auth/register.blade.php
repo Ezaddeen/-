@@ -1,0 +1,11 @@
+@extends('layouts.storefront')
+{{-- نموذج إنشاء حساب عميل ويحقق الاسم والبريد وكلمة المرور والموافقة. --}}
+
+@section('title', 'إنشاء حساب | بصمة الحرفيين')
+
+@section('content')
+<section class="auth-shell shell">
+	<div class="auth-art auth-art-register"><img src="https://images.unsplash.com/photo-1452860606245-08befc0ff44b?auto=format&fit=crop&w=1200&q=85" alt="أدوات وخامات في مساحة عمل حرفية"><div class="auth-art-copy"><span class="eyebrow">مساحة لكل صانع</span><h1>حكايتك تستحق<br>أن <em>تُرى.</em></h1><p>ابدأ رحلتك بين أيادي اليمن التي تصنع للمكان معنى.</p></div></div>
+	<div class="auth-panel"><span class="eyebrow">انضم إلى بصمة الحرفيين</span><h2>إنشاء حساب</h2><p>أنشئ حسابك وابدأ اكتشاف صُنّاع اليمن.</p><form class="auth-form" method="POST" action="{{ route('register.store') }}">@csrf<label for="name">الاسم</label><input id="name" name="name" autocomplete="name" value="{{ old('name') }}" placeholder="الاسم الكامل" required>@error('name')<span class="field-error">{{ $message }}</span>@enderror<label for="email">البريد الإلكتروني</label><input id="email" name="email" type="email" autocomplete="email" value="{{ old('email') }}" placeholder="name@example.com" required>@error('email')<span class="field-error">{{ $message }}</span>@enderror<label for="password">كلمة المرور</label><input id="password" name="password" type="password" autocomplete="new-password" placeholder="ثمانية أحرف على الأقل" minlength="8" required><label for="password_confirmation">تأكيد كلمة المرور</label><input id="password_confirmation" name="password_confirmation" type="password" autocomplete="new-password" required>@error('password')<span class="field-error">{{ $message }}</span>@enderror<label class="checkbox-label"><input type="checkbox" name="terms" value="1" required> أوافق على شروط الاستخدام وسياسة الخصوصية</label>@error('terms')<span class="field-error">{{ $message }}</span>@enderror<button class="button button-dark" type="submit">إنشاء حساب <span>←</span></button></form><p class="auth-switch">لديك حساب؟ <a href="{{ route('login') }}">سجّل الدخول</a></p></div>
+</section>
+@endsection

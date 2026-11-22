@@ -1,0 +1,12 @@
+@extends('layouts.storefront')
+{{-- نظرة عامة لحساب العميل تعرض الإحصاءات والاختصارات والعنوان الافتراضي. --}}
+
+@section('title', 'حسابي | بصمة الحرفيين')
+
+@section('content')
+<section class="account-heading shell"><div><span class="eyebrow">مساحتك في بصمة الحرفيين</span><h1>أهلًا، <em>{{ $profile['name'] }}</em></h1><p>تابع بياناتك وعناوينك والقطع التي حفظتها.</p></div><a class="button button-outline" href="{{ route('products.index') }}">اكتشف منتجات جديدة <span>←</span></a></section>
+<section class="account-layout shell"><aside>@include('components.customer-nav')</aside><div class="account-main"><div class="account-stat-grid"><a class="account-stat" href="{{ route('account.orders') }}"><span>↻</span><small>طلباتي</small><strong>{{ count($orders) }} طلبات</strong></a><a class="account-stat" href="{{ route('account.addresses') }}"><span>⌖</span><small>عنوان التوصيل</small><strong>{{ count($addresses) }} {{ count($addresses) === 1 ? 'عنوان محفوظ' : 'عناوين محفوظة' }}</strong></a><a class="account-stat" href="{{ route('cart.show') }}"><span>▤</span><small>سلة مشترياتك</small><strong>{{ array_sum(session('cart_items', [])) }} منتجات</strong></a></div>
+    <div class="account-section-heading"><div><span class="eyebrow">اختصار سريع</span><h2>إدارة حسابك</h2></div></div><div class="account-shortcuts"><a href="{{ route('account.profile') }}"><span>◉</span><div><strong>بياناتي الشخصية</strong><small>الاسم ووسائل التواصل</small></div><b>←</b></a><a href="{{ route('account.addresses') }}"><span>⌖</span><div><strong>عناوين التوصيل</strong><small>المحافظة والمدينة وأقرب معلم</small></div><b>←</b></a><a href="{{ route('account.favorites') }}"><span>♡</span><div><strong>المنتجات المفضلة</strong><small>القطع التي حفظتها للعودة إليها</small></div><b>←</b></a></div>
+    <div class="address-preview"><div class="account-section-heading"><div><span class="eyebrow">عنوانك الافتراضي</span><h2>{{ $addresses[0]['label'] ?? 'أضف عنوانك الأول' }}</h2></div><a class="quiet-link" href="{{ route('account.addresses') }}">إدارة العناوين <span>←</span></a></div>@if (count($addresses))<p>{{ $addresses[0]['governorate'] }} · {{ $addresses[0]['city'] }} · {{ $addresses[0]['district'] }}</p><small>أقرب معلم: {{ $addresses[0]['landmark'] }}</small>@else<a href="{{ route('account.addresses') }}">إضافة عنوان</a>@endif</div>
+    </div></section>
+@endsection

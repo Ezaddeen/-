@@ -1,0 +1,12 @@
+@extends('layouts.storefront')
+{{-- يعرض تفاصيل طلب البائع ويتيح الانتقال للحالة التالية المسموحة. --}}
+
+@section('title', 'طلب المتجر '.$order['reference'].' | بصمة الحرفيين')
+
+@section('content')
+<section class="seller-heading shell"><div><span class="eyebrow">تفاصيل الطلب</span><h1>طلب <em>{{ $order['reference'] }}</em></h1><p>{{ $order['created_at'] }} · {{ $order['status'] }}</p></div><a class="quiet-link" href="{{ route('seller.orders.index') }}">← العودة للطلبات</a></section>
+<section class="seller-layout shell"><aside>@include('components.seller-nav')</aside><div class="seller-main seller-order-detail"><div class="seller-form-panel"><div class="seller-section-head"><div><span class="eyebrow">عناصر من متجرك</span><h2>المنتجات</h2></div></div>@foreach ($order['items'] as $item)<div class="order-line-item"><img src="{{ $item['image'] }}" alt="{{ $item['name'] }}"><div><strong>{{ $item['name'] }}</strong><small>الكمية: {{ $item['quantity'] }}</small></div><b>{{ number_format($item['price'] * $item['quantity']) }} ر.ي</b></div>@endforeach<div class="seller-order-total"><span>قيمة منتجاتك</span><strong>{{ number_format($order['total']) }} ر.ي</strong></div></div>
+    <div class="seller-form-panel"><div class="seller-section-head"><div><span class="eyebrow">حالة التجهيز</span><h2>{{ $order['status'] }}</h2></div></div>@if ($nextStatus)<form class="status-update-form" action="{{ route('seller.orders.status', $order['reference']) }}" method="POST">@csrf @method('PATCH')<input type="hidden" name="status" value="{{ $nextStatus }}"><button class="button button-dark" type="submit">نقل إلى: {{ $nextStatus }} <span>←</span></button></form>@else<p class="seller-status-final">اكتمل تسليم هذا الطلب.</p>@endif</div>
+    <div class="seller-form-panel"><div class="seller-section-head"><div><span class="eyebrow">التوصيل والتواصل</span><h2>بيانات العميل</h2></div></div><div class="seller-customer-details"><p><strong>{{ $order['address']['label'] }}</strong></p><p>{{ $order['address']['governorate'] }} · {{ $order['address']['city'] }} · {{ $order['address']['district'] }}</p><p>أقرب معلم: {{ $order['address']['landmark'] }}</p><p>{{ $order['address']['phone'] }}</p><p>الدفع: {{ $order['payment_method'] }}</p>@if ($order['customer_note'])<p>ملاحظة: {{ $order['customer_note'] }}</p>@endif</div></div>
+</div></section>
+@endsection

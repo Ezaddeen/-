@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780" role="img" aria-labelledby="title description">
+  <title id="title">مقترح شعار بصمة الحرفيين</title>
+  <desc id="description">الاسم مكتوب بخط عربي، مع خطوط بصمة منقوشة في كلمة بصمة وغرز نسيج داخل كلمة الحرفيين، بنسختين فاتحة وداكنة.</desc>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&amp;display=swap');
+    .wordmark { font-family: 'Aref Ruqaa', serif; font-weight: 700; }
+  </style>
+  <defs>
+    <clipPath id="fingerprint-light"><text class="wordmark" x="300" y="320" text-anchor="middle" direction="rtl" font-size="150">بصمة</text></clipPath>
+    <clipPath id="craft-light"><text class="wordmark" x="300" y="470" text-anchor="middle" direction="rtl" font-size="118">الحرفيين</text></clipPath>
+    <clipPath id="fingerprint-dark"><text class="wordmark" x="900" y="320" text-anchor="middle" direction="rtl" font-size="150">بصمة</text></clipPath>
+    <clipPath id="craft-dark"><text class="wordmark" x="900" y="470" text-anchor="middle" direction="rtl" font-size="118">الحرفيين</text></clipPath>
+  </defs>
+  <rect width="600" height="780" fill="#fbf8f0"/>
+  <rect x="600" width="600" height="780" fill="#183c32"/>
+  <path d="M600 0v780" stroke="#d7d1c5"/>
+
+  <g fill="#183c32">
+    <text class="wordmark" x="300" y="320" text-anchor="middle" direction="rtl" font-size="150">بصمة</text>
+    <text class="wordmark" x="300" y="470" text-anchor="middle" direction="rtl" font-size="118">الحرفيين</text>
+  </g>
+  <g clip-path="url(#fingerprint-light)" fill="none" stroke="#c58b58" stroke-width="5" stroke-linecap="round" opacity=".8">
+    <path d="M211 259c0-57 37-91 89-91s89 34 89 91M229 259c0-45 28-71 71-71s71 26 71 71M247 259c0-33 20-52 53-52s53 19 53 52M265 259c0-22 13-34 35-34s35 12 35 34M283 259c0-10 6-16 17-16s17 6 17 16"/>
+    <path d="M300 243v72" stroke="#ad5941"/>
+  </g>
+  <g clip-path="url(#craft-light)" fill="none" stroke="#ad5941" stroke-width="4" stroke-linecap="round" opacity=".78">
+    <path d="M95 403c65 0 65 34 130 34s65-34 130-34 65 34 130 34M95 432c65 0 65 34 130 34s65-34 130-34 65 34 130 34"/>
+    <path d="m155 401 12 10m34 22 12 10m34-10 12-10m34-12 12 10m34 22 12 10m34-10 12-10m34-12 12 10" stroke="#c58b58" stroke-width="3" stroke-dasharray="3 7"/>
+  </g>
+
+  <g fill="#fffefa">
+    <text class="wordmark" x="900" y="320" text-anchor="middle" direction="rtl" font-size="150">بصمة</text>
+    <text class="wordmark" x="900" y="470" text-anchor="middle" direction="rtl" font-size="118">الحرفيين</text>
+  </g>
+  <g clip-path="url(#fingerprint-dark)" fill="none" stroke="#d8ad7d" stroke-width="5" stroke-linecap="round" opacity=".9">
+    <path d="M811 259c0-57 37-91 89-91s89 34 89 91M829 259c0-45 28-71 71-71s71 26 71 71M847 259c0-33 20-52 53-52s53 19 53 52M865 259c0-22 13-34 35-34s35 12 35 34M883 259c0-10 6-16 17-16s17 6 17 16"/>
+    <path d="M900 243v72" stroke="#d97b5e"/>
+  </g>
+  <g clip-path="url(#craft-dark)" fill="none" stroke="#d97b5e" stroke-width="4" stroke-linecap="round" opacity=".9">
+    <path d="M695 403c65 0 65 34 130 34s65-34 130-34 65 34 130 34M695 432c65 0 65 34 130 34s65-34 130-34 65 34 130 34"/>
+    <path d="m755 401 12 10m34 22 12 10m34-10 12-10m34-12 12 10m34 22 12 10m34-10 12-10m34-12 12 10" stroke="#d8ad7d" stroke-width="3" stroke-dasharray="3 7"/>
+  </g>
+</svg>

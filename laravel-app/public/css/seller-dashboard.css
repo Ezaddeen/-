@@ -1,0 +1,63 @@
+.seller-panel{border:1px solid var(--line);padding:18px;background:var(--white)}
+.seller-dashboard-metrics{grid-template-columns:repeat(4,minmax(0,1fr));margin-bottom:16px}
+.seller-dashboard-grid{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(230px,.8fr);gap:14px}
+.seller-sales-panel,.seller-shortcuts-panel,.seller-activity-panel,.seller-stock-panel,.seller-inventory-panel,.seller-report-panel{min-width:0}
+.seller-dashboard-grid .seller-section-head,.seller-panel>.seller-section-head{margin:0 0 15px}
+.seller-dashboard-grid .seller-section-head h2,.seller-panel>.seller-section-head h2{font-size:16px}
+.seller-chart{height:170px;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));align-items:end;gap:12px;border-bottom:1px solid var(--line);padding-top:12px}
+.seller-chart-column{height:100%;display:grid;grid-template-rows:20px minmax(0,1fr) 22px;justify-items:center;align-items:end;gap:5px}
+.seller-chart-column>strong{font-size:8px;color:var(--muted);font-weight:500;white-space:nowrap}
+.seller-chart-track{width:min(28px,70%);height:100%;display:flex;align-items:end;background:#f2f1eb;border-radius:2px 2px 0 0;overflow:hidden}
+.seller-chart-track i{display:block;width:100%;min-height:4px;background:var(--forest);border-radius:2px 2px 0 0}
+.seller-chart-column small{font-size:8px;color:var(--muted)}
+.seller-chart-note,.seller-demo-note,.seller-muted-note{font-size:9px;color:var(--muted)}
+.seller-chart-note{margin:10px 0 0}
+.seller-shortcuts-panel{display:flex;flex-direction:column}
+.seller-shortcut{display:grid;grid-template-columns:32px minmax(0,1fr) 14px;align-items:center;gap:9px;padding:11px 0;border-top:1px solid var(--line)}
+.seller-shortcut>span:first-child{width:30px;height:30px;display:grid;place-items:center;background:var(--paper);color:var(--forest);font-size:15px}
+.seller-shortcut>span:nth-child(2){display:grid;gap:2px}
+.seller-shortcut strong{font-size:10px}
+.seller-shortcut small{font-size:8px;color:var(--muted)}
+.seller-shortcut>b{color:var(--clay);font-size:12px}
+.seller-activity-panel,.seller-stock-panel,.seller-report-panel{margin-top:14px}
+.seller-order-total{font-size:9px;color:var(--forest);white-space:nowrap}
+.seller-low-stock-list{border-top:1px solid var(--line)}
+.seller-low-stock-list>a{display:grid;grid-template-columns:minmax(0,1fr) auto 14px;align-items:center;gap:12px;padding:10px 4px;border-bottom:1px solid var(--line);font-size:10px}
+.seller-low-stock-list strong{font-size:9px;color:var(--clay);white-space:nowrap}
+.seller-low-stock-list b{color:var(--clay)}
+.seller-empty-compact{min-height:72px;padding:13px;border:1px dashed var(--line);display:flex;align-items:center;gap:9px}
+.seller-empty-compact>span{color:var(--forest);font-size:15px}
+.seller-empty-compact strong{font-size:10px}
+.seller-empty-compact small{font-size:8px;color:var(--muted)}
+.seller-inventory-metrics,.seller-report-metrics{grid-template-columns:repeat(3,minmax(0,1fr));margin-bottom:14px}
+.seller-inventory-panel,.seller-report-panel{padding:18px}
+.seller-inventory-table,.seller-report-table{border-top:1px solid var(--line)}
+.seller-inventory-labels,.seller-inventory-row{display:grid;grid-template-columns:minmax(180px,1.5fr) minmax(90px,.8fr) minmax(85px,.65fr) minmax(80px,.65fr) minmax(105px,.75fr) 55px;align-items:center;gap:10px}
+.seller-inventory-labels{padding:9px 5px;color:var(--muted);font-size:8px}
+.seller-inventory-row{min-height:72px;border-top:1px solid var(--line);padding:9px 5px;font-size:9px}
+.seller-inventory-row .seller-product-name{min-width:0;display:flex;align-items:center;gap:10px}
+.seller-inventory-row .seller-product-name img{width:46px;height:46px;flex:none}
+.seller-inventory-row .seller-product-name>span{min-width:0;display:grid}
+.seller-inventory-row .seller-product-name strong{font-size:9px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.seller-inventory-row .seller-product-name small,.seller-inventory-row>strong small{font-size:8px;color:var(--muted);font-weight:400}
+.seller-stock-number.is-low{color:var(--clay)}
+.seller-stock-badge{width:max-content;padding:3px 7px;font-size:8px;background:#edf2eb;color:var(--forest)}
+.seller-stock-badge.is-low,.seller-stock-badge.is-empty{background:#f7e9e3;color:#994d37}
+.seller-demo-note{margin:12px 2px 0}
+.seller-report-filter{display:flex;align-items:end;gap:10px;margin-bottom:14px;padding:14px 16px;border:1px solid var(--line);background:var(--white)}
+.seller-report-filter>div{display:grid;gap:4px}
+.seller-report-filter label{font-size:9px;color:var(--muted)}
+.seller-report-filter input{height:38px;min-width:150px;padding:0 9px;border:1px solid var(--line);background:var(--white);color:var(--ink);font:inherit;font-size:10px}
+.seller-report-filter .button{min-height:38px;padding-inline:14px;font-size:9px}
+.seller-report-filter>.quiet-link{font-size:9px;padding-bottom:8px}
+.seller-report-labels,.seller-report-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(110px,.5fr) minmax(120px,.6fr);align-items:center;gap:12px}
+.seller-report-labels{padding:9px 6px;font-size:8px;color:var(--muted)}
+.seller-report-row{min-height:47px;border-top:1px solid var(--line);padding:8px 6px;font-size:10px}
+.seller-report-row strong:last-child{color:var(--forest)}
+.seller-report-row small{font-size:8px;font-weight:400;color:var(--muted)}
+.seller-report-statuses{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+.seller-report-statuses>a{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:11px;border:1px solid var(--line);font-size:9px}
+.seller-report-statuses strong{font-family:var(--serif);font-size:16px;color:var(--forest)}
+@media(max-width:1000px){.seller-dashboard-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.seller-dashboard-grid{grid-template-columns:minmax(0,1fr) minmax(210px,.8fr)}.seller-inventory-labels,.seller-inventory-row{grid-template-columns:minmax(155px,1.4fr) minmax(70px,.7fr) minmax(85px,.7fr) minmax(85px,.7fr) 50px}.seller-inventory-labels>span:nth-child(5),.seller-inventory-row>.seller-stock-badge{display:none}}
+@media(max-width:700px){.seller-panel{padding:13px}.seller-dashboard-grid{grid-template-columns:1fr}.seller-dashboard-metrics{grid-template-columns:1fr 1fr}.seller-dashboard-metrics>div:last-child{grid-column:auto}.seller-chart{gap:6px}.seller-chart-track{width:22px}.seller-inventory-metrics,.seller-report-metrics{grid-template-columns:1fr 1fr}.seller-inventory-metrics>div:last-child{grid-column:span 2}.seller-report-filter{flex-wrap:wrap;align-items:end}.seller-report-filter>div{flex:1;min-width:120px}.seller-report-filter input{min-width:0;width:100%}.seller-inventory-labels{display:none}.seller-inventory-row{grid-template-columns:minmax(0,1fr) auto;gap:5px;padding:10px 3px}.seller-inventory-row .seller-product-name{grid-column:1/-1}.seller-inventory-row>.seller-category{display:none}.seller-inventory-row>.seller-stock-number{grid-column:1;justify-self:start;margin-inline-start:56px}.seller-inventory-row>.edit-link{grid-column:2;grid-row:2}.seller-report-labels,.seller-report-row{grid-template-columns:minmax(0,1fr) auto;gap:8px}.seller-report-labels>span:last-child,.seller-report-row>strong:last-child{grid-column:1/-1}.seller-report-labels>span:nth-child(2){grid-column:2;grid-row:1}.seller-report-statuses{grid-template-columns:1fr 1fr}}
+/* أنماط مؤشرات لوحة البائع والمخزون والمبيعات والتقارير. */

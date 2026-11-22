@@ -1,0 +1,5 @@
+{{-- صفحة إدارة التصنيفات والمناطق التي تظهر في المنصة. --}}
+<div class="admin-management-page">
+@include('filament.pages.admin-management-styles')
+<div class="admin-page-heading"><div><span>بيانات المنصة</span><h1>التصنيفات والمناطق</h1></div></div>
+<div class="admin-grid"><section><h2>التصنيفات</h2><div class="admin-inline-form"><input type="text" wire:model="categoryName" placeholder="تصنيف جديد"><button type="button" wire:click="addCategory">إضافة</button></div>@foreach($categories as $category)<div class="admin-simple-row"><strong>{{ $category['name'] }}</strong><button type="button" wire:click="toggleCategory({{ $category['id'] }})">{{ $category['active'] ? 'تعطيل' : 'تفعيل' }}</button></div>@endforeach</section><section><h2>المناطق</h2><div class="admin-inline-form"><input type="text" wire:model="regionName" placeholder="محافظة أو منطقة"><button type="button" wire:click="addRegion">إضافة</button></div>@foreach($regions as $region)<div class="admin-simple-row"><strong>{{ $region['name'] }}</strong><span>{{ $region['active'] ? 'نشطة' : 'متوقفة' }}</span></div>@endforeach</section></div></div>

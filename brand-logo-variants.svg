@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="482" viewBox="0 0 1200 760" role="img" aria-labelledby="title">
+  <title id="title">بصمة الحرفيين، نسخة فاتحة ونسخة داكنة</title>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&amp;display=swap');.wordmark{font-family:'Aref Ruqaa',serif;font-weight:700}</style>
+  <defs>
+    <clipPath id="ba-glyph-clip"><text x="50" y="84" text-anchor="middle" direction="rtl" font-family="Aref Ruqaa, serif" font-size="96" font-weight="700">ب</text></clipPath>
+    <symbol id="craft-letter" viewBox="0 0 100 100">
+      <text x="50" y="84" text-anchor="middle" direction="rtl" fill="var(--mark-bg)" font-family="Aref Ruqaa, serif" font-size="96" font-weight="700">ب</text>
+      <g clip-path="url(#ba-glyph-clip)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 53c16 2 31-2 53-18M37 48c-1-9-7-14-15-14 1 8 6 13 15 14M47 45c1-10 8-15 17-15-2 9-7 14-17 15M57 39c3-8 10-10 17-8-3 7-8 10-17 8" stroke="var(--mark-frame)" stroke-width="3"/>
+        <path d="M39 52h19v7c0 3 7 6 10 11l5 19c1 5-2 8-8 8H31c-6 0-9-3-8-8l5-19c3-5 11-8 11-11z" fill="var(--mark-bg)" stroke="var(--mark-line)" stroke-width="3"/>
+        <path d="M39 52v-5h19v5M30 74h40M27 83h46" stroke="var(--mark-frame)" stroke-width="3"/>
+        <path d="m34 78 5-4 5 4 5-4 5 4 5-4 5 4m-27 9 5-4 5 4 5-4 5 4 5-4 5 4" stroke="var(--mark-line)" stroke-width="2"/>
+        <circle cx="37" cy="43" r="3" fill="var(--mark-fruit)" stroke="none"/>
+        <circle cx="66" cy="31" r="3" fill="var(--mark-fruit)" stroke="none"/>
+      </g>
+    </symbol>
+  </defs>
+  <rect width="600" height="760" fill="#fffefa"/>
+  <rect x="600" width="600" height="760" fill="#183c32"/>
+  <path d="M600 0v760" stroke="#d7d1c5" stroke-width="1"/>
+  <svg x="225" y="86" width="150" height="190" viewBox="0 0 100 100" style="--mark-bg:#183c32;--mark-frame:#c58b58;--mark-line:#f3e8d2;--mark-fruit:#ad5941">
+    <use href="#craft-letter"/>
+  </svg>
+  <text class="wordmark" x="300" y="382" text-anchor="middle" direction="rtl" fill="#183c32" font-size="60">بصمة الحرفيين</text>
+  <svg x="825" y="86" width="150" height="190" viewBox="0 0 100 100" style="--mark-bg:#fffefa;--mark-frame:#ad5941;--mark-line:#183c32;--mark-fruit:#ad5941">
+    <use href="#craft-letter"/>
+  </svg>
+  <text class="wordmark" x="900" y="382" text-anchor="middle" direction="rtl" fill="#fffefa" font-size="60">بصمة الحرفيين</text>
+</svg>

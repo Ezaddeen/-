@@ -1,0 +1,5 @@
+{{-- صفحة مؤشرات التقرير وتصدير الطلبات بصيغة CSV. --}}
+<div class="admin-management-page">
+@include('filament.pages.admin-management-styles')
+<div class="admin-page-heading"><div><span>تحليلات المنصة</span><h1>التقارير والتصدير</h1></div><button type="button" wire:click="exportOrders">تنزيل CSV للطلبات</button></div>
+<div class="dashboard-metrics admin-report-metrics"><article><span>المستخدمون</span><strong>{{ number_format($summary['users']) }}</strong></article><article><span>المتاجر المعتمدة</span><strong>{{ number_format($summary['sellers']) }}</strong></article><article><span>طلبات المتاجر المعلقة</span><strong>{{ number_format($summary['pending_stores']) }}</strong></article><article><span>الطلبات</span><strong>{{ number_format($summary['orders']) }}</strong></article><article><span>إجمالي القيم المسجلة</span><strong>{{ number_format($summary['orders_total']) }} ر.ي</strong></article><article><span>الطلبات المسلمة</span><strong>{{ number_format($summary['delivered']) }}</strong></article></div></div>

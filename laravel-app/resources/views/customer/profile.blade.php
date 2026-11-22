@@ -1,0 +1,9 @@
+@extends('layouts.storefront')
+{{-- يتيح تعديل الاسم والبريد ورقم هاتف العميل. --}}
+
+@section('title', 'بياناتي | بصمة الحرفيين')
+
+@section('content')
+<section class="account-heading shell"><div><span class="eyebrow">إعدادات الحساب</span><h1>بياناتي <em>الشخصية</em></h1><p>حدّث بيانات التواصل التي تستخدمها عند التسوق.</p></div></section>
+<section class="account-layout shell"><aside>@include('components.customer-nav')</aside><div class="account-main"><div class="account-panel"><div class="account-section-heading"><div><span class="eyebrow">المعلومات الأساسية</span><h2>بيانات التواصل</h2></div></div><form class="account-form" action="{{ route('account.profile.update') }}" method="POST">@csrf @method('PUT')<label for="name">الاسم الكامل</label><input id="name" name="name" value="{{ old('name', $profile['name']) }}" required minlength="2" maxlength="100">@error('name')<small class="field-error">{{ $message }}</small>@enderror<label for="phone">رقم الهاتف</label><input id="phone" name="phone" value="{{ old('phone', $profile['phone']) }}" inputmode="tel" placeholder="967 7XX XXX XXX" required>@error('phone')<small class="field-error">{{ $message }}</small>@enderror<label for="email">البريد الإلكتروني</label><input id="email" name="email" type="email" value="{{ old('email', $profile['email']) }}" autocomplete="email" required>@error('email')<small class="field-error">{{ $message }}</small>@enderror<div class="form-actions"><button class="button button-dark" type="submit">حفظ التغييرات</button><a class="quiet-link" href="{{ route('account.dashboard') }}">العودة إلى حسابي</a></div></form></div><p class="account-hint">تأكد من صحة رقم الهاتف لتسهيل التواصل بشأن التوصيل.</p></div></section>
+@endsection

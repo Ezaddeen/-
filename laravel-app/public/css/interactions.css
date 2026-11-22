@@ -1,0 +1,3 @@
+.product-heart{width:36px;height:36px;display:grid;place-items:center;z-index:2;background:rgba(24,60,50,.72);border:0;border-radius:50%;padding:0;cursor:pointer}
+.product-heart:focus-visible{outline:2px solid #fff;outline-offset:2px}
+/* أنماط التفاعلات والأزرار والحالات البصرية المشتركة في واجهات المتجر. */

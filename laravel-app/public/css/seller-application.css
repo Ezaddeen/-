@@ -1,0 +1,189 @@
+.seller-application-page,
+.seller-application-admin {
+    display: grid;
+    gap: 1.25rem;
+    padding-bottom: 4rem;
+}
+
+.seller-application-form-panel {
+    max-width: 860px;
+}
+
+.seller-application-status {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    max-width: 860px;
+    padding: 1.25rem;
+    border: 1px solid #d5e5dc;
+    border-radius: 14px;
+    background: #f0f7f2;
+}
+
+.seller-application-status-rejected {
+    border-color: #ead9c4;
+    background: #fff8ef;
+}
+
+.seller-application-status-mark {
+    display: grid;
+    width: 2rem;
+    height: 2rem;
+    flex: 0 0 2rem;
+    place-items: center;
+    border-radius: 50%;
+    background: #dcebe1;
+    color: #183c32;
+    font-weight: 700;
+}
+
+.seller-application-status h2,
+.seller-application-card h2,
+.seller-application-empty h2 {
+    margin: 0 0 .4rem;
+}
+
+.seller-application-status p,
+.seller-application-status small,
+.seller-application-card-head p,
+.seller-application-empty p {
+    margin: .25rem 0 0;
+    color: #66746d;
+}
+
+.seller-application-card {
+    padding: 1.5rem;
+}
+
+.seller-application-card-head,
+.seller-application-actions {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.25rem;
+}
+
+.seller-application-card-head time {
+    color: #66746d;
+    white-space: nowrap;
+}
+
+.seller-application-details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.seller-application-details div {
+    min-width: 0;
+}
+
+.seller-application-details dt,
+.seller-application-reject label {
+    margin-bottom: .35rem;
+    color: #66746d;
+    font-size: .88rem;
+}
+
+.seller-application-details dd {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.seller-application-about {
+    grid-column: 1 / -1;
+}
+
+.seller-application-actions {
+    align-items: flex-end;
+    justify-content: flex-start;
+    border-top: 1px solid #e8ebe8;
+    padding-top: 1.25rem;
+}
+
+.seller-application-reject {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: .65rem;
+}
+
+.seller-application-reject label {
+    width: 100%;
+}
+
+.seller-application-reject input {
+    min-width: 220px;
+    flex: 1;
+}
+
+.seller-application-empty {
+    padding: 2rem;
+}
+
+.seller-application-steps {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: 860px;
+    gap: .75rem;
+}
+
+.seller-application-steps div {
+    display: grid;
+    grid-template-columns: 2.25rem 1fr;
+    grid-template-rows: auto auto;
+    column-gap: .7rem;
+    align-items: center;
+    border: 1px solid #dde7e1;
+    border-radius: 14px;
+    background: #fff;
+    padding: 1rem;
+}
+
+.seller-application-steps div > span {
+    grid-row: 1 / 3;
+    display: grid;
+    width: 2.25rem;
+    height: 2.25rem;
+    place-items: center;
+    border-radius: 50%;
+    background: #183c32;
+    color: #fff;
+    font-weight: 700;
+}
+
+.seller-application-steps strong,
+.seller-application-steps small {
+    margin: 0;
+}
+
+.seller-application-steps small {
+    color: #66746d;
+}
+
+@media (max-width: 640px) {
+    .seller-application-steps {
+        grid-template-columns: 1fr;
+    }
+    .seller-application-card-head,
+    .seller-application-actions {
+        flex-direction: column;
+    }
+
+    .seller-application-details {
+        grid-template-columns: 1fr;
+    }
+
+    .seller-application-about {
+        grid-column: auto;
+    }
+
+    .seller-application-reject,
+    .seller-application-reject input,
+    .seller-application-reject button {
+        width: 100%;
+    }
+}
+/* أنماط طلب إنشاء متجر وحالات الاعتماد والرفض ومعلومات المراجعة. */
